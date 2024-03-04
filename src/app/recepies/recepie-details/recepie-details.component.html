@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-xs-12">
+        <img [src]="clickedRecepie.imagePath" alt="{{clickedRecepie.name}}" class="img-responsive" style="max-width: 300px;">
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <a appBest> 
+            <button class="btn btn-primary dropdown-toggle">Manage <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li style="cursor: pointer;"><a (click)="sendData()">add to shopping-list</a></li>
+                <li style="cursor: pointer;"><a (click)="onEdit()">Edit</a></li>
+                <li style="cursor: pointer;"><a (click)="onDelete()">Delete</a></li>
+            </ul>
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h3>{{clickedRecepie.name}}</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        {{clickedRecepie.discription}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <ul  class="list-group-item" *ngFor="let item of clickedRecepie.ingridents">
+            <p>{{item.name}} {{item.amount}}</p>
+        </ul>
+    </div>
+</div>
