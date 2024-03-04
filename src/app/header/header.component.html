@@ -17,7 +17,6 @@
           <li routerLinkActive="active"><a routerLink="/recepies" *ngIf="isLoggedIn">Recepies </a></li>
           <li routerLinkActive="active"><a routerLink="/auth" *ngIf="!isLoggedIn">Authenticate</a></li>
           <li routerLinkActive="active"><a routerLink="/shopping-list">Shopping List</a></li>
-          <li>Nothing</li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a style="cursor: pointer;" *ngIf="isLoggedIn" (click)="onLogout()">Logout</a></li>

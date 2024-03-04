@@ -53,6 +53,9 @@ export class AuthComponent implements OnInit {
     authform.reset()
   }
 
+  onRemoveDynamic(){
+    this.error = null
+  }
   
 
 }
