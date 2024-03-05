@@ -8,6 +8,7 @@ import { StartComponent } from "./start/start.component";
 import { RouterModule } from "@angular/router";
 import { ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
+import { RecepiesRoutingModule } from "./recepies-routing.module";
 
 @NgModule({
     declarations: [
@@ -18,7 +19,12 @@ import { CommonModule } from "@angular/common";
         RecepieItemComponent,
         StartComponent,
     ],
-    imports: [RouterModule, ReactiveFormsModule, CommonModule],
+    imports: [
+        RouterModule,
+        ReactiveFormsModule,
+        CommonModule,
+        RecepiesRoutingModule
+    ],
     exports: [
         RecepiesComponent,
         RecepieDetailsComponent,
