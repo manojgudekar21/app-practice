@@ -9,6 +9,7 @@ import { RouterModule } from "@angular/router";
 import { ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { RecepiesRoutingModule } from "./recepies-routing.module";
+import { SharedModule } from "../shared/shared.module";
 
 @NgModule({
     declarations: [
@@ -23,7 +24,8 @@ import { RecepiesRoutingModule } from "./recepies-routing.module";
         RouterModule,
         ReactiveFormsModule,
         CommonModule,
-        RecepiesRoutingModule
+        RecepiesRoutingModule,
+        SharedModule
     ],
     exports: [
         RecepiesComponent,
