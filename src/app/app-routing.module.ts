@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { AuthComponent } from './auth/auth.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'recepies',pathMatch:'full'},
+  {path: 'recepies',loadChildren: ()=> import('./recepies/recepies.module').then(m=>m.RecepiesModule)},
   {path:'auth',component:AuthComponent}
 ];
 

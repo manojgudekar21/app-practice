@@ -9,7 +9,7 @@ import { StartComponent } from "./start/start.component";
 
 const routes: Routes = [
     {
-        path: 'recepies', component: RecepiesComponent, canActivate: [AuthGuardService], children: [
+        path: '', component: RecepiesComponent, canActivate: [AuthGuardService], children: [
             { path: '', component: StartComponent },
             { path: 'new', component: EditComponent },
             { path: ':id', component: RecepieDetailsComponent, resolve: [ResolverService] },
